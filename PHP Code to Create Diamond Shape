@@ -1,0 +1,37 @@
+<?php
+
+// Function to create diamond shape
+function createDiamond($n)
+{
+    // Upper half of the diamond
+    for ($i = 1; $i <= $n; $i++) {
+        for ($j = 1; $j <= $n - $i; $j++) {
+            echo " ";
+        }
+
+        for ($j = 1; $j <= 2 * $i - 1; $j++) {
+            echo "*";
+        }
+
+        echo "\n";
+    }
+
+    // Lower half of the diamond
+    for ($i = $n - 1; $i >= 1; $i--) {
+        for ($j = 1; $j <= $n - $i; $j++) {
+            echo " ";
+        }
+
+        for ($j = 1; $j <= 2 * $i - 1; $j++) {
+            echo "*";
+        }
+
+        echo "\n";
+    }
+}
+
+// Call the function with desired size of diamond (odd number for symmetry)
+$n = 5;
+createDiamond($n);
+
+?>
